@@ -95,19 +95,40 @@ function App() {
 
   return (
     <div className="App">
-      What's GOOOOOOOD!
-      <button id='connectButton' onClick={connect}>
-        Connect
-      </button>
-      <button onClick={fund}>
-        Fund
-      </button>
-      <button onClick={getBalance}>Balance</button>
-      <button onClick={withdrawFunds}>Withdraw</button>
-      <div className="ethAmountWrapper">
-        <label htmlFor="fund">Eth Amount</label>
-        <input type="text" ref={inputRef} id="ethAmount" placeholder="0.1" />
+      <div className="appContainer">
+        <div className="firstSection">
+          <h1>Social <span> Breeze </span> </h1>
+          <p>The PERFECT way to buy me a coffee</p>
+        </div>
+        <div className="secondSection">
+          <button id='connectButton' onClick={connect}>
+            Connect Wallet
+          </button>
+          <button onClick={fund}>
+            Fund
+          </button>
+          <button onClick={getBalance}>Balance</button>
+          <button onClick={withdrawFunds}>Withdraw</button>
+          <div className="ethAmountWrapper">
+            <input type="text" ref={inputRef} id="ethAmount" placeholder="0.1" />
+            <button htmlFor="fund">Donate</button>
+          </div>
+        </div>
+        <div className="scrollingTextWrapper">
+            <div className="scrollingText">
+              <span>This is an infinity sliding text example &nbsp;&nbsp; This is an infinity sliding text example &nbsp;&nbsp; This is an infinity sliding text example &nbsp;&nbsp; </span>
+            </div>
+            <div className="scrollingText scrollingText2">
+              <span>This is an infinity sliding text example &nbsp;&nbsp; This is an infinity sliding text example &nbsp;&nbsp; </span>
+            </div>
+            {/* <div className="scrollingText scrollingText3">
+              <span>This is an infinity sliding text example &nbsp;&nbsp; This is an infinity sliding text example &nbsp;&nbsp;</span>
+            </div> */}
+            
+          </div>
       </div>
+      
+      
     </div>
   )
 }
